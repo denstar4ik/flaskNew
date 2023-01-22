@@ -42,7 +42,7 @@ def close_db(error):
 def hi():  # put application's code here
     return 'sdfsdf!'
 
-@app.route('/aa')
+@app.route('/aaadd')
 def hi1():
     return 'aaa!!!'
 
