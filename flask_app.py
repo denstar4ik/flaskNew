@@ -164,7 +164,7 @@ if __name__ == '__main__':
 @app.route('/update_server', methods=['POST', 'GET'])
 def webhook():
     if request.method == 'POST':
-        repo = git.Repo('/home/mypythonprojects/flaskNew')
+        repo = git.Repo('/home/sealeks/flaskNew')
         origin = repo.remotes.origin
         origin.pull()
         return 'Сайт обновился', 200
