@@ -171,4 +171,3 @@ def webhook():
     else:
         return 'Сам не заходи', 400
 
-)
