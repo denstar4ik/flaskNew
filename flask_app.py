@@ -5,6 +5,7 @@ import math
 import os
 import sqlite3
 import time
+import git
 
 from flask import Flask, render_template, flash, redirect, session, url_for, request, abort, g
 
@@ -155,3 +156,15 @@ def page_not_found(error):
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+@app.route('/update_server', methods=['POST', 'GET'])
+def webhook():
+    if request.method == 'POST':
+        repo = git.Repo('/home/mypythonprojects/flaskNew')
+        origin = repo.remotes.origin
+        origin.pull()
+        return 'Сайт обновился', 200
+    else:
+        return 'Сам не заходи', 400
+
+)
