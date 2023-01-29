@@ -50,6 +50,10 @@ def hi1():
 def hi2():
     return 'adddd'
 
+@app.route('/12')
+def hi3():
+    return '21'
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():  # put application's code here
