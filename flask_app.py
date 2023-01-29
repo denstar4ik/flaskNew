@@ -58,6 +58,10 @@ def hi3():
 def test2():
     return 'test'
 
+@app.route('/test2')
+def test3():
+    return 'test123321'
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():  # put application's code here
